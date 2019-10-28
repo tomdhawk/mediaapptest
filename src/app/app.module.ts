@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule
   ],
   providers: [],
+  // Bootstrap = Waar is het vertrekpunt van de rest van de toepassing
   bootstrap: [AppComponent]
 })
 export class AppModule { }
