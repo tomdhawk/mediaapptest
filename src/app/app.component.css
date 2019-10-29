@@ -24,6 +24,10 @@
     flex: 1;
   }
 
+  .movieinfo{
+    display: block;
+  }
+
   .toolbar {
     height: 60px;
     margin: -8px;
@@ -282,4 +286,8 @@
       display: none;
       visibility: hidden;
     }
+  }
+
+  .poster {
+    float: left;
   }

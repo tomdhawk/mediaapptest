@@ -10,7 +10,7 @@ logo: string = './assets/images/logo.png'
 width: number;
 alt: string;
 height: number;
-title: string = "Media media"
+title: string = "Imagine Movie Group"
   constructor() { }
 
 
