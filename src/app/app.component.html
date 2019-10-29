@@ -1,18 +1,21 @@
 <media-header></media-header>
 
-<div >
+<div>
+  <button type="button" mdbBtn color="primary">Show all Movies</button>
+  <button type="button" onclick="showSeen()">Show seen Movies</button>
+  <button type="button" mdbBtn color="primary">Show not seen Movies</button>
   <ul class="collection" *ngFor="let aMovie of movies">
-    <!-- ngIf=Conditie, wordt hij weer gegeven. Vb: Als de film gezien is dan... -->
-    <ul class="collection-itemavatar" *ngIf="!aMovie.seen">
-      <ul class="movinfo" >
+    <!-- ngIf=Conditie, wordt hij weer gegeven. Vb: Als de film gezien is dan..*ngIf="!aMovie.seen". -->
+    <ul class="collection-itemavatar">
+      <ul class="movinfo">
         <li>
-          <img class="poster"  [src]="aMovie.poster" [alt]="aMovie.poster" />
+          <img class="poster" [src]="aMovie.poster" [alt]="aMovie.poster" />
         </li>
         <li>
           <span class="id"><u>ID:</u> {{aMovie.id}}</span>
         </li>
         <!-- Css klasse lime wordt toegepast wanneer seen of !seen -->
-        <li [class.lime]="aMovie.seen" [class.red]="!aMovie.seen">          
+        <li [class.lime]="aMovie.seen" [class.red]="!aMovie.seen">
           <span class="title"><u>Title:</u> {{aMovie.title}}</span>
         </li>
         <li>
@@ -26,6 +29,8 @@
     </ul>
   </ul>
 </div>
+
+
 
 <!-- <div class="seengreen" v-bind:class="{aMovie.seen=true: watched}"></div> -->
 

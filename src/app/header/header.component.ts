@@ -11,6 +11,7 @@ width: number;
 alt: string;
 height: number;
 title: string = "Imagine Movie Group"
+
   constructor() { }
 
 
