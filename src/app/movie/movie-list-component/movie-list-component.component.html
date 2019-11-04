@@ -1,0 +1,30 @@
+
+<div>
+    <button type="button" (click)="showSeen()">Show seen Movies</button>
+    <ul class="collection" *ngFor="let aMovie of movies">
+      <!-- ngIf=Conditie, wordt hij weer gegeven. Vb: Als de film gezien is dan..*ngIf="!aMovie.seen". -->
+      <ul class="collection-itemavatar">
+        <ul class="movinfo">
+          <li>
+            <a [routerLink] = "['/movies', aMovie.id]"> 
+            <img class="poster" [src]="aMovie.poster" [alt]="aMovie.poster" />
+            </a>
+          </li>
+          <li>
+            <span class="id"><u>ID:</u> {{aMovie.id}}</span>
+          </li>
+          <!-- Css klasse lime wordt toegepast wanneer seen of !seen -->
+          <li [class]="aMovie.seen? 'lime' : 'red'">
+            <span class="title"><u>Title:</u> {{aMovie.title}}</span>
+          </li>
+          <li>
+            <span class="year"><u>Release Year:</u> {{aMovie.year}}</span>
+          </li>
+          <li>
+            <span class="seen"><u>Seen:</u> {{aMovie.seen}}</span>
+          </li>
+          <span class="title"><u>Plot:</u> {{aMovie.plot}}</span>
+        </ul>
+      </ul>
+    </ul>
+  </div>

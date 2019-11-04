@@ -63,5 +63,9 @@ export class MovieDataService {
     },
   ];
 
+  public getMovie(id: number): Movie{
+    return this.movies.find(x => x.id === id)
+  }
+
   constructor() { }
 }
